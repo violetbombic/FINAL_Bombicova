@@ -37,7 +37,7 @@ num_pages = pdfReader.numPages
 pageObj = pdfReader.getPage(1) 
 
 # extracting text from page 
-text = pageObj.extract_text
+text = st.text_area(pageObj.extract_text)
 
 
 # closing the pdf file object 
@@ -55,5 +55,5 @@ with open(relative_path,'rb') as pdf_file:
     
 # OpenPDF(relative_path)
 
-words_tokens = word_tokenize( page_content )
+# words_tokens = word_tokenize( page_content )
 

@@ -12,7 +12,7 @@ st.title("Project_Name")
 st.write("Please insert a relative path of the PDF file. Note that the PDF file has to be saved in and copied from the same folder in GitHub, /n where  the .py file is. Try for example: CORE_INTENTIONAL_FEATURES_IN_THE_SYNTACT.pdf")
 
 relative_path = st.file_uploader("Please choose a file")
-stringio = StringIO(relative_path.getvalue().decode("utf-32"))
+stringio = StringIO(relative_path.getvalue().encode("utf-8"))
 st.write(stringio)
 
 string_data = stringio.read()

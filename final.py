@@ -9,23 +9,23 @@ relative_path = st.text_input('Give me a relative path to PDF file (without the 
   
 
 # creating a pdf file object 
-  objfile = open(relative_path, 'rb') 
+objfile = open(relative_path, 'rb') 
 
 # creating a pdf reader object 
-  pdfReader = PdfFileReader(objfile) 
+pdfReader = PdfFileReader(objfile) 
 
 # printing number of pages in pdf file 
-  num_pages = pdfReader.numPages
+num_pages = pdfReader.numPages
 
 # creating a page object 
-  pageObj = pdfReader.getPage(1) 
+pageObj = pdfReader.getPage(1) 
 
 # extracting text from page 
-  text = pageObj.extract_text
+text = pageObj.extract_text
 
 
 # closing the pdf file object 
-  objfile.close()
+objfile.close()
 
 page_content=""
 with open(relative_path,'rb') as pdf_file:

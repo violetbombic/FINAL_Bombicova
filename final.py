@@ -2,6 +2,10 @@ import streamlit as st
 import PyPDF2
 from PyPDF2 import PdfFileReader
 
+st.title("Project_Name")
+st.text("Please insert a relative path of the PDF file. Note that the PDF file has to be saved in and copied from the same folder, where .py file is.")
+
+
 relative_path = st.text_input('Give me a relative path to PDF file (without the quotes): ')
 
 # def OpenPDF(relative_path):
@@ -35,6 +39,6 @@ with open(relative_path,'rb') as pdf_file:
     page = read_pdf.getPage(page_number)
     page_content += page.extract_text()
  
-st.write(page_content)
+# st.write(page_content)
     
 # OpenPDF(relative_path)

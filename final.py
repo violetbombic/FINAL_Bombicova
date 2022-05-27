@@ -3,7 +3,7 @@ import PyPDF2
 from PyPDF2 import PdfFileReader
 
 st.title("Project_Name")
-st.text("Please insert a relative path of the PDF file. Note that the PDF file has to be saved in and copied from the same folder, where .py file is.")
+st.text("Please insert a relative path of the PDF file. /n Note that the PDF file has to be saved in and copied from the same folder in GitHub, /n where  the .py file is.")
 
 
 relative_path = st.text_input('Give me a relative path to PDF file (without the quotes): ')
@@ -42,3 +42,6 @@ with open(relative_path,'rb') as pdf_file:
 # st.write(page_content)
     
 # OpenPDF(relative_path)
+
+words_tokens = word_tokenize( page_content )
+

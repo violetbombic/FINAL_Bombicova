@@ -20,7 +20,7 @@ def OpenPDF(relative_path):
   pageObj = pdfReader.getPage(1) 
 
 # extracting text from page 
-  text = pageObj.extract_text()
+  text = st.text_area(pageObj.extract_text())
 
 
 # closing the pdf file object 

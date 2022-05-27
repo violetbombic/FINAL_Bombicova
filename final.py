@@ -4,7 +4,7 @@ from PyPDF2 import PdfFileReader
 
 relative_path = st.text_input('Give me a relative path to PDF file (without the quotes): ')
 
-def OpenPDF(relative_path):
+# def OpenPDF(relative_path):
 
   
 
@@ -35,4 +35,4 @@ with open(relative_path,'rb') as pdf_file:
     page = read_pdf.getPage(page_number)
     page_content += page.extract_text()
     
-OpenPDF(relative_path)
+# OpenPDF(relative_path)

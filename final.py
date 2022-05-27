@@ -1,6 +1,7 @@
 import streamlit as st
 import PyPDF2
 from PyPDF2 import PdfFileReader
+import nltk
 from nltk import word_tokenize, sent_tokenize
 
 

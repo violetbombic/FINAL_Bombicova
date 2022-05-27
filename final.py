@@ -19,7 +19,7 @@ relative_path = st.file_uploader("Please choose a file")
 #    st.write(bytes_data)
     
     
-stringio = StringIO(relative_path.getvalue().decode("utf-8"))
+stringio = StringIO(relative_path.getvalue().decode("latin-1"))
 st.write(stringio)
 
 string_data = stringio.read()

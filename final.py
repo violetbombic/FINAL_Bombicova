@@ -1,5 +1,6 @@
 import streamlit as st
 import PyPDF2
+from PyPDF2 import PdfFileReader
 
 relative_path = st.text_input('Give me a relative path to PDF file (without the quotes): ')
 

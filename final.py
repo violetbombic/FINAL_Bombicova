@@ -5,7 +5,9 @@ from nltk import word_tokenize, sent_tokenize
 
 
 st.title("Project_Name")
-st.text("Please insert a relative path of the PDF file. /n Note that the PDF file has to be saved in and copied from the same folder in GitHub, /n where  the .py file is.")
+st.write("Please insert a relative path of the PDF file.
+         Note that the PDF file has to be saved in and copied from the same folder in GitHub, /n where  the .py file is.
+         Try for example: CORE_INTENTIONAL_FEATURES_IN_THE_SYNTACT.pdf")
 
 
 relative_path = st.text_input('Give me a relative path to PDF file (without the quotes): ')

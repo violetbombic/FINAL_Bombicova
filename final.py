@@ -34,4 +34,4 @@ with open(relative_path,'rb') as pdf_file:
     page = read_pdf.getPage(page_number)
     page_content += page.extract_text()
     
- OpenPDF(relative_path)
+OpenPDF(relative_path)

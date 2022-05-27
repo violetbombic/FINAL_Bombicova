@@ -4,14 +4,16 @@ from PyPDF2 import PdfFileReader
 import nltk
 from nltk import word_tokenize, sent_tokenize
 nltk.download('punkt')
+import io
+from io import StringIO
 
 
 st.title("Project_Name")
 st.write("Please insert a relative path of the PDF file. Note that the PDF file has to be saved in and copied from the same folder in GitHub, /n where  the .py file is. Try for example: CORE_INTENTIONAL_FEATURES_IN_THE_SYNTACT.pdf")
 
 relative_path = st.file_uploader("Please choose a file")
-# stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
-# st.write(stringio)
+stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+st.write(stringio)
 
 # string_data = stringio.read()
 # st.write(string_data)

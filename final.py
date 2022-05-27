@@ -13,9 +13,9 @@ st.write("Please insert a relative path of the PDF file. Note that the PDF file 
 
 relative_path = st.file_uploader("Please choose a file")
 
-if uploaded_file is not None:
+if relative_path is not None:
   # To read file as bytes:
-   bytes_data = uploaded_file.getvalue()
+   bytes_data = relative_path.getvalue()
    st.write(bytes_data)
     
     

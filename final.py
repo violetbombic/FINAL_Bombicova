@@ -30,25 +30,24 @@ relative_path = st.file_uploader("Please choose a file")
 # def OpenPDF(relative_path):
 
 if relative_path is not None:  
+    # creating a pdf file object 
+    objfile = open(relative_path, 'rb') 
 
-# creating a pdf file object 
-objfile = open(relative_path, 'rb') 
+    # creating a pdf reader object 
+    pdfReader = PdfFileReader(objfile) 
 
-# creating a pdf reader object 
-pdfReader = PdfFileReader(objfile) 
+    # printing number of pages in pdf file 
+    num_pages = pdfReader.numPages
 
-# printing number of pages in pdf file 
-num_pages = pdfReader.numPages
+    # creating a page object 
+    pageObj = pdfReader.getPage(1) 
 
-# creating a page object 
-pageObj = pdfReader.getPage(1) 
-
-# extracting text from page 
-text = st.text_area(pageObj.extract_text)
+    # extracting text from page 
+    text = st.text_area(pageObj.extract_text)
 
 
-# closing the pdf file object 
-objfile.close()
+    # closing the pdf file object 
+    objfile.close()
 
 page_content=""
 with open(relative_path,'rb') as pdf_file:

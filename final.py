@@ -47,7 +47,7 @@ if relative_path is not None:
 
 
     # closing the pdf file object 
-    objfile.close()
+    #objfile.close()
 
 #     page_content=""
 #     with open(relative_path,'rb') as pdf_file:

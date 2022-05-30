@@ -39,11 +39,17 @@ if relative_path is not None:
     # printing number of pages in pdf file 
     num_pages = pdfReader.numPages
 
-    # creating a page object 
-    pageObj = pdfReader.getPage(1) 
+#     # creating a page object 
+#     pageObj = pdfReader.getPage(1) 
 
-    # extracting text from page 
-    text = st.write(pageObj.extract_text)
+#     # extracting text from page 
+#     text = st.write(pageObj.extract_text)
+
+number_of_pages = read_pdf.getNumPages()
+for page_number in range(number_of_pages):
+    page = read_pdf.getPage(page_number)
+    page_content += page.extract_text()
+    st.write(page_content)
 
 
     # closing the pdf file object 

@@ -31,10 +31,10 @@ relative_path = st.file_uploader("Please choose a file")
 
 if relative_path is not None:  
     # creating a pdf file object 
-    objfile = open(relative_path, 'rb') 
+    #objfile = open(relative_path, 'rb') 
 
     # creating a pdf reader object 
-    pdfReader = PdfFileReader(objfile) 
+    pdfReader = PdfFileReader(relative_path) 
 
     # printing number of pages in pdf file 
     num_pages = pdfReader.numPages

@@ -45,11 +45,11 @@ if relative_path is not None:
 #     # extracting text from page 
 #     text = st.write(pageObj.extract_text)
 
-number_of_pages = read_pdf.getNumPages()
+    number_of_pages = read_pdf.getNumPages()
 
-for page_number in range(number_of_pages):
-    page = read_pdf.getPage(page_number)
-    page_content += page.extract_text()
+    for page_number in range(number_of_pages):
+        page = read_pdf.getPage(page_number)
+        page_content += page.extract_text()
     st.write(page_content)
 
 

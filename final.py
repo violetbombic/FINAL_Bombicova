@@ -54,8 +54,8 @@ if relative_path is not None:
         read_pdf = PyPDF2.PdfFileReader(pdf_file)
         number_of_pages = read_pdf.getNumPages()
         for page_number in range(number_of_pages):
-        page = read_pdf.getPage(page_number)
-        page_content += page.extract_text()
+            page = read_pdf.getPage(page_number)
+            page_content += page.extract_text()
  
         st.write(page_content)
     

@@ -19,11 +19,11 @@ relative_path = st.file_uploader("Please choose a file")
 #    st.write(bytes_data)
     
     
-stringio = StringIO(relative_path.getvalue().decode("latin-1"))
-st.write(stringio)
+# stringio = StringIO(relative_path.getvalue().decode("latin-1"))
+# st.write(stringio)
 
-string_data = stringio.read()
-st.write(string_data)
+# string_data = stringio.read()
+# st.write(string_data)
 
 # relative_path = st.text_input('Give me a relative path to PDF file (without the quotes): ')
 

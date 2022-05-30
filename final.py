@@ -29,7 +29,7 @@ relative_path = st.file_uploader("Please choose a file")
 
 # def OpenPDF(relative_path):
 
-  
+if relative_path is not None:  
 
 # creating a pdf file object 
 objfile = open(relative_path, 'rb') 

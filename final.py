@@ -45,6 +45,7 @@ if relative_path is not None:
 #     # extracting text from page 
 #     text = st.write(pageObj.extract_text)
 
+    page_content=""
     number_of_pages = pdfReader.getNumPages()
 
     for page_number in range(number_of_pages):
